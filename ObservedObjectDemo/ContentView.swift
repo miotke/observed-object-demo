@@ -28,7 +28,7 @@ struct ContentView: View {
                         Image(systemName: "plus")
                     }
                     .sheet(isPresented: $navigationVM.isShowingAddView) {
-                        AddView(isShowingAddView: $navigationVM.isShowingAddView, coreDataManager: coreDataManager)
+                        AddView(coreDataManager: coreDataManager, isShowingAddView: $navigationVM.isShowingAddView)
                     }
                 }
             }

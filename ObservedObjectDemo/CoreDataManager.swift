@@ -5,7 +5,6 @@
 //  Created by Andrew on 2/12/23.
 //
 
-import SwiftUI
 import CoreData
 import Foundation
 
@@ -32,7 +31,6 @@ class CoreDataManager: ObservableObject {
             savedEntities = try container.viewContext.fetch(request)
             print("🚒 Documents Directory: \(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!)")
         } catch {
-            // TODO: If this fails display an alert
             print("Error fetching data: \(error)")
         }
     }
@@ -50,7 +48,6 @@ class CoreDataManager: ObservableObject {
             try container.viewContext.save()
             fetchData()
         } catch let error {
-            // TODO: If this fails display an alert
             print("Error saving data: \(error)")
         }
     }

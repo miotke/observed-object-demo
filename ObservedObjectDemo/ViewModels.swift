@@ -12,5 +12,6 @@ class NavigationViewModel: ObservableObject {
 }
 
 class DataViewModel: ObservableObject {
+    @Published var id: UUID = UUID()
     @Published var name: String = ""
 }
